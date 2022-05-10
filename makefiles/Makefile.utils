@@ -1,0 +1,2 @@
+php-cs-fixer: ## Lance php-cs-fixer
+	$(EXEC_SYMFONY) tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src

@@ -1,0 +1,20 @@
+docker-start: ## Démarre les conteneurs du projet
+	docker-compose start
+
+docker-stop: ## Arrête les conteneurs du projet
+	docker-compose stop
+
+docker-restart: docker-stop ## Redémarre les conteneurs du projet
+	docker-compose start
+
+docker-up: docker-stop ## Lance tous les conteneurs décrits dans docker-compose.yml
+	docker-compose up -d
+
+docker-up-build: docker-stop ## Construit et lance tous les conteneurs décrits dans docker-compose.yml
+	docker-compose up --build -d
+
+docker-bash-as-root: ## Lance un bash dans le conteneur php en tant que root
+	$(EXEC_ROOT_IT) /bin/bash
+
+docker-bash: ## Lance un bash dans le conteneur php en tant qu'utilisateur symfony
+	$(EXEC_SYMFONY_IT) /bin/bash
