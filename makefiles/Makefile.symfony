@@ -1,5 +1,8 @@
-sf-install-5.4: ## Installation de la version 5.4 de Symfony
-	$(EXEC_SYMFONY) symfony new . --version=5.4
+sf-install-6.3: ## Installation de la version 6.3 de Symfony
+	$(EXEC_SYMFONY) symfony new . --version="6.3.*" --webapp
 
-sf-install-6.0: ## Installation de la version 6.0 de Symfony
-	$(EXEC_SYMFONY) symfony new . --version=6.0
+sf-install-6.4: ## Installation de la version 6.4 de Symfony
+	$(EXEC_SYMFONY) symfony new . --version="6.4.*@dev" --webapp
+
+sf-check-requirements: # Vérification des prérequis
+	$(EXEC_SYMFONY) symfony check:requirements

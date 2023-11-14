@@ -1,6 +1,6 @@
 DC = docker-compose
 EXEC = docker exec
-EXEC_SYMFONY = $(EXEC) --user symfony ${APP_NAME}-php
-EXEC_ROOT = $(EXEC) ${APP_NAME}-php
-EXEC_SYMFONY_IT = $(EXEC) -it --user symfony ${APP_NAME}-php
-EXEC_ROOT_IT = $(EXEC) -it ${APP_NAME}-php
+EXEC_SYMFONY = $(EXEC) --user symfony ${APP_NAME}-php-fpm
+EXEC_ROOT = $(EXEC) ${APP_NAME}-php-fpm
+EXEC_SYMFONY_IT = $(EXEC) -it --user symfony ${APP_NAME}-php-fpm
+EXEC_ROOT_IT = $(EXEC) -it ${APP_NAME}-php-fpm
